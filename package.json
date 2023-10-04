@@ -1,0 +1,18 @@
+{
+  "name": "bp_mobile",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.8"
+  },
+  "dependencies": {
+    "js-translator": "^5.0.1",
+    "vanilla-i18n": "^1.0.8"
+  }
+}

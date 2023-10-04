@@ -1,0 +1,733 @@
+@import "./reset.scss";
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  padding: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .banner-background {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -3;
+
+    &__cover {
+      width: 100%;
+      height: 100%;
+      z-index: -3;
+      object-fit: cover;
+    }
+
+    &__filter {
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      object-fit: cover;
+    }
+  }
+
+  .banner__close {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 37px;
+    left: 24px;
+  }
+
+  .banner__title {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 0px 48px rgba(4, 3, 26, 0.83);
+    font-family: "SF Pro";
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 46px;
+    position: relative;
+    top: 20%;
+  }
+
+  .banner__title:lang(de),
+  .banner__title:lang(fr) {
+    font-size: 30px !important;
+    line-height: 32px;
+  }
+
+  .banner-cards {
+    display: flex;
+    flex-direction: row;
+    width: calc(100% - 50px);
+    height: 138.6px;
+    justify-content: space-between;
+    // margin-top: 40px;
+    gap: 7px;
+    position: absolute;
+    top: 40%;
+
+    .banner-card {
+      display: flex;
+      width: 33%;
+      position: relative;
+      padding: 10px 7px;
+      box-sizing: border-box;
+      justify-content: flex-start;
+      align-items: flex-end;
+      border-radius: 10px;
+
+      &__cover {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+
+      &__title {
+        color: #fff;
+        font-family: SF Pro;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+    }
+  }
+
+  .banner-plans {
+    display: flex;
+    width: calc(100% - 50px);
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    top: 65%;
+
+    .banner-plans-plan {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 56px;
+      flex-shrink: 0;
+      border-radius: 32px;
+      border: 1px solid #fff;
+      background: rgba(255, 255, 255, 0.3);
+      backdrop-filter: blur(5.436563491821289px);
+      text-decoration: none;
+      padding: 8px 24px;
+      gap: 37px;
+      box-sizing: border-box;
+      position: relative;
+
+      &-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 60%;
+
+        &__title {
+          color: #fff;
+          font-family: SF Pro;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+
+        &__title:lang(de) {
+          font-size: 14px;
+        }
+
+        &__subtitle {
+          color: #fff;
+          font-family: SF Pro;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          opacity: 0.7;
+        }
+
+        &__subtitle:lang(fr) {
+          font-size: 14px;
+        }
+      }
+
+      &__price {
+        color: #fff;
+        font-family: SF Pro;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.7;
+      }
+
+      &__price:lang(fr),
+      &__price:lang(es),
+      &__price:lang(ja),
+      &__price:lang(pt),
+      &__price:lang(de) {
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+      &__marker {
+        position: absolute;
+        height: 20px;
+        width: 119px;
+        top: -10px;
+        right: 24px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          color: #141131;
+          font-family: SF Pro;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+          text-align: center;
+        }
+
+        span {
+          font-size: 11px;
+        }
+      }
+    }
+
+    .banner-plans-plan:not(:first-of-type) {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 56px;
+      flex-shrink: 0;
+      border-radius: 32px;
+      border: none;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5.436563491821289px);
+      text-decoration: none;
+      padding: 8px 24px;
+      gap: 37px;
+      box-sizing: border-box;
+      position: relative;
+
+      .banner-plans-plan-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 60%;
+
+        &__title {
+          color: #fff;
+          font-family: SF Pro;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-transform: uppercase;
+          text-decoration: none;
+        }
+
+        &__title:lang(de) {
+          font-size: 12px;
+        }
+
+        &__subtitle {
+          color: #fff;
+          font-family: SF Pro;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          opacity: 0.7;
+        }
+      }
+
+      .banner-plans__price {
+        color: #fff;
+        font-family: SF Pro;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.7;
+      }
+
+      .banner-plans__marker {
+        position: absolute;
+        height: 20px;
+        width: 119px;
+        top: -10px;
+        right: 24px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+          color: #141131;
+          font-family: SF Pro;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          text-transform: uppercase;
+          text-align: center;
+        }
+
+        span:lang(fr) {
+          font-size: 11px !important;
+        }
+      }
+    }
+
+    &__button {
+      width: 100%;
+      height: 56px;
+      border-radius: 32px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 24px;
+      box-sizing: border-box;
+
+      a {
+        color: #070b33;
+        text-align: center;
+        font-family: SF Pro;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .banner-links {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 50px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+    .banner-link {
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+      font-family: SF Pro Display;
+      font-size: 12.5px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.577px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      // width: 33%;
+    }
+
+    .banner-link:lang(de) {
+      font-size: 10px;
+      // width: 33%;
+    }
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    padding: 24px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    .banner-background {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      z-index: -3;
+
+      &__cover {
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+        object-fit: cover;
+      }
+
+      &__filter {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        object-fit: cover;
+      }
+    }
+
+    .banner__close {
+      display: flex;
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 72px;
+      left: 24px;
+    }
+
+    .banner__title {
+      color: #fff;
+      text-align: center;
+      text-shadow: 0px 0px 48px rgba(4, 3, 26, 0.83);
+      font-family: "SF Pro";
+      font-size: 42px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 46px;
+      position: relative;
+      top: 20%;
+    }
+
+    .banner__title:lang(de),
+    .banner__title:lang(fr) {
+      font-size: 30px !important;
+      line-height: 32px;
+    }
+
+    .banner-cards {
+      display: flex;
+      flex-direction: row;
+      width: calc(100% - 50px);
+      height: 138.6px;
+      justify-content: space-between;
+      gap: 14px;
+      position: absolute;
+      top: 40%;
+
+      .banner-card {
+        display: flex;
+        width: 104.4px;
+        position: relative;
+        padding: 10px 7px;
+        box-sizing: border-box;
+        justify-content: flex-start;
+        align-items: flex-end;
+        border-radius: 10px;
+
+        &__cover {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+
+        &__title {
+          color: #fff;
+          font-family: SF Pro;
+          font-size: 11px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+
+    .banner-plans {
+      display: flex;
+      width: calc(100% - 50px);
+      flex-direction: column;
+      gap: 8px;
+      position: absolute;
+      top: 65%;
+
+      .banner-plans-plan {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 32px;
+        border: 1px solid #fff;
+        background: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(5.436563491821289px);
+        text-decoration: none;
+        padding: 8px 24px;
+        gap: 37px;
+        box-sizing: border-box;
+        position: relative;
+
+        &-text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          width: 60%;
+
+          &__title {
+            color: #fff;
+            font-family: SF Pro;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            text-decoration: none;
+          }
+
+          &__title:lang(de) {
+            font-size: 14px;
+          }
+
+          &__subtitle {
+            color: #fff;
+            font-family: SF Pro;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            opacity: 0.7;
+          }
+
+          &__subtitle:lang(fr) {
+            font-size: 14px;
+          }
+        }
+
+        &__price {
+          color: #fff;
+          font-family: SF Pro;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          opacity: 0.7;
+        }
+
+        &__price:lang(fr),
+        &__price:lang(es),
+        &__price:lang(ja),
+        &__price:lang(pt),
+        &__price:lang(de) {
+          display: flex;
+          align-items: center;
+          font-size: 12px;
+          line-height: 14px;
+        }
+
+        &__marker {
+          position: absolute;
+          height: 20px;
+          width: 119px;
+          top: -10px;
+          right: 24px;
+          border-radius: 10px;
+          background: #fff;
+          box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            color: #141131;
+            font-family: SF Pro;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            text-align: center;
+          }
+
+          span {
+            font-size: 11px;
+          }
+        }
+      }
+
+      .banner-plans-plan:not(:first-of-type) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 56px;
+        flex-shrink: 0;
+        border-radius: 32px;
+        border: none;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5.436563491821289px);
+        text-decoration: none;
+        padding: 8px 24px;
+        gap: 37px;
+        box-sizing: border-box;
+        position: relative;
+
+        .banner-plans-plan-text {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          width: 60%;
+
+          &__title {
+            color: #fff;
+            font-family: SF Pro;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            text-transform: uppercase;
+            text-decoration: none;
+          }
+
+          &__title:lang(de) {
+            font-size: 12px;
+          }
+
+          &__subtitle {
+            color: #fff;
+            font-family: SF Pro;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            opacity: 0.7;
+          }
+        }
+
+        .banner-plans__price {
+          color: #fff;
+          font-family: SF Pro;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          opacity: 0.7;
+        }
+
+        .banner-plans__marker {
+          position: absolute;
+          height: 20px;
+          width: 119px;
+          top: -10px;
+          right: 24px;
+          border-radius: 10px;
+          background: #fff;
+          box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            color: #141131;
+            font-family: SF Pro;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            text-transform: uppercase;
+            text-align: center;
+          }
+
+          span:lang(fr) {
+            font-size: 11px !important;
+          }
+        }
+      }
+
+      &__button {
+        width: 100%;
+        height: 56px;
+        border-radius: 32px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 8px;
+
+        a {
+          color: #070b33;
+          text-align: center;
+          font-family: SF Pro;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .banner-links {
+      position: absolute;
+      bottom: 21px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 50px);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+
+      .banner-link {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        font-family: SF Pro Display;
+        font-size: 12.5px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.577px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+
+      .banner-link:lang(de) {
+        font-size: 10px;
+      }
+    }
+  }
+}

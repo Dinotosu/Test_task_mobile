@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./src/styles/main.scss">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+</head>
+
+<body>
+  <div id="app">
+    <div clas="banner">
+
+      <div class="container">
+        <div class="banner-background">
+          <img class="banner-background__cover" src="/images/bg.png" alt="">
+          <img class="banner-background__filter" src="/images/filter.png" alt="">
+
+        </div>
+
+        <div class="banner__close">
+          <img src="./images/cross.svg" alt="">
+        </div>
+
+        <h1 class="banner__title" data-langkey="Get Unlimited <br>Access">
+          Get Unlimited <br>Access
+        </h1>
+
+        <div class="banner-cards">
+          <div class="banner-card">
+            <div class="banner-card__cover">
+              <img src="/images/card-1/f1.png" srcset="/images/card-1/f1@2x.png" alt="Альт-текст.">
+            </div>
+
+            <span class="banner-card__title" data-langkey="Unlimited Art <br>Creation">
+              Unlimited Art <br>Creation
+            </span>
+          </div>
+
+          <div class="banner-card">
+            <div class="banner-card__cover">
+              <img src="/images/card-2/f2.png" srcset="/images/card-2/f2@2x.png" alt="Альт-текст.">
+            </div>
+
+            <span class="banner-card__title" data-langkey="Exclusive <br>Styles">
+              Exclusive <br>Styles
+            </span>
+          </div>
+
+          <div class="banner-card">
+            <div class="banner-card__cover">
+              <img src="/images/card-3/f3.png" srcset="/images/card-3/f3@2x.png" alt="Альт-текст.">
+            </div>
+
+            <span class="banner-card__title" data-langkey="Magic Avatars <br>With 20% Off">
+              Magic Avatars <br>With 20% Off
+            </span>
+          </div>
+        </div>
+
+        <div class="banner-plans">
+          <a href="https://apple.com/" class="banner-plans-plan">
+            <div class="banner-plans-plan-text">
+              <h3 class="banner-plans-plan-text__title" data-langkey="YEARLY ACCESS">
+                YEARLY ACCESS
+              </h3>
+
+              <p class="banner-plans-plan-text__subtitle" data-langkey="Just {{price}} per year">
+                Just {{price}} per year
+              </p>
+            </div>
+
+            <p class="banner-plans-plan__price" data-langkey="{{price}} <br>per week">
+              {{price}} <br>per week
+            </p>
+
+            <div class="banner-plans-plan__marker">
+              <span data-langkey="BEST OFFER">BEST OFFER</span>
+            </div>
+          </a>
+
+          <a href="https://google.com/" class="banner-plans-plan">
+            <div class="banner-plans-plan-text">
+              <h3 class="banner-plans-plan-text__title" data-langkey="YEARLY ACCESS">
+                YEARLY ACCESS
+              </h3>
+            </div>
+
+            <p class="banner-plans-plan__price" data-langkey="{{price}} <br>per week">
+              {{price}} <br>per week
+            </p>
+          </a>
+
+          <button class="banner-plans__button">
+            <a href="#" data-langkey="Continue">Continue</a>
+          </button>
+        </div>
+
+        <div class="banner-links">
+          <a href="#" class="banner-link" data-langkey="Terms of Use">
+            Terms of Use
+          </a>
+
+          <a href="#" class="banner-link" data-langkey="Privacy Policy">
+            Privacy Policy
+          </a>
+
+          <a href="#" class="banner-link" data-langkey="Restore">
+            Restore
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
